@@ -23,7 +23,7 @@ class App extends Component {
       .then((users) => this.setState({ monsters: users }));
   }
 
-  handleChanges = (e) => {
+  handleChange = (e) => {
     // arrow funcs auto allows binding 'this' - aka 'lexical scoping'
     this.setState({ searchField: e.target.value });
   };
@@ -40,7 +40,7 @@ class App extends Component {
       <div className="App">
         <SearchBox
           placeholder="search monsters"
-          handleChange={this.handleChanges}
+          handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />
       </div>
