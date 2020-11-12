@@ -7,7 +7,7 @@ function Card(props) {
         src={`https://robohash.org/${props.Single_monster.id}?set=set2&size=180x180`}
         alt="Monster"
       />
-      <h1>{props.Single_monster.name}</h1>
+      <h2>{props.Single_monster.name}</h2>
       <p>{props.Single_monster.email}</p>
     </div>
   );
