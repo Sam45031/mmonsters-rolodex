@@ -23,9 +23,16 @@ class App extends Component {
       .then((users) => this.setState({ monsters: users }));
   }
 
+  // handleChange = (e) => {
+  //   // arrow funcs auto allows binding 'this' - aka 'lexical scoping'
+  //   this.setState({ searchField: e.target.value });
+  //   console.log(this);
+  // };
+
   handleChange = (e) => {
-    // arrow funcs auto allows binding 'this' - aka 'lexical scoping'
-    this.setState({ searchField: e.target.value });
+    this.setState((prevState, prevProps) => {
+      return { searchField: e.target.value };
+    });
   };
 
   render() {
