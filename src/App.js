@@ -10,7 +10,7 @@ class App extends Component {
       monsters: [],
       searchField: "",
     };
-    // Testing git
+    // Testing git changes
     // define handleChange in constructor in order to be able to access the this keyword
     // bind returns a new function where the context of 'this' can be accessed
     // can use arrow functions now so dont really need to bind
